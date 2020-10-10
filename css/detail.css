@@ -1,0 +1,17 @@
+main.container {
+    display: flex;
+    color: white;
+    padding-top: 6em;
+}
+
+main.container .info {
+    flex-grow: 3;
+    height: 20px;
+    background-color: white;
+}
+
+main.container .related {
+    flex-grow: 1;
+    height: 20px;
+    background-color: yellow;
+}
