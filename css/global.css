@@ -49,12 +49,12 @@ a {
 
 .footer-div {
     padding-top: 2rem;
-    padding-left: 5rem;
+    
 }
 
 .footer-div-inline {
     padding-top: 2rem;
-    padding-left: 5rem;
+    padding-right: 5rem;
     display: inline-block;
     margin-bottom: 2rem;
 }
