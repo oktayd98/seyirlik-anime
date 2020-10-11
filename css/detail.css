@@ -4,14 +4,27 @@ main.container {
     padding-top: 6em;
 }
 
-main.container .info {
+.info {
+    display: flex;
+    flex-direction: column;
     flex-grow: 3;
-    height: 20px;
-    background-color: white;
+    
 }
 
-main.container .related {
+main.container > img{
+    width: 274px;
+    margin-right: 58px;
+}
+
+.related {
     flex-grow: 1;
     height: 20px;
-    background-color: yellow;
+    
+}
+
+.related>.related-row{
+    background-color: rgba(255,255,255, 0.07);
+    height: 135px;
+    width: 100%;
+    margin-bottom: 1rem;
 }

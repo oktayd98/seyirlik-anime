@@ -3,6 +3,8 @@ header > .container {
     align-items: center;
     justify-content: space-between;
     height: 68px;
+    width: 100%;
+    max-width: 1280px;
 }
 
 .navbar {
