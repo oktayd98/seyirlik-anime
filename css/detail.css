@@ -4,25 +4,48 @@ main.container {
     padding-top: 6em;
 }
 
+main.container > .left {
+    display:flex
+}
+
 .info {
     display: flex;
     flex-direction: column;
-    flex-grow: 3;
-    
+    flex-grow: 3;    
 }
 
-main.container > img{
-    width: 274px;
-    margin-right: 58px;
+main.container > .left > .anime-img{
+    margin-right: 2rem;
+}
+
+.left > .info > .flex-row {
+    margin-bottom: 10px;
+}
+
+.left > .info > .flex-row h3 {
+    display:inline;
+}
+
+.left > .info > .flex-row > .flex-row.rating{
+    display:inline;
+    margin-left: 10px;
+    color: #ffff00;
+}
+
+.left > .info > .flex-row > span.title{
+    font-weight: 400;
+}
+
+.left > .info > .flex-row > span{
+    font-weight: 200;
 }
 
 .related {
-    flex-grow: 1;
     height: 20px;
-    
+    margin-left: 2rem;
 }
 
-.related>.related-row{
+.related > .related-row{
     background-color: rgba(255,255,255, 0.07);
     height: 135px;
     width: 100%;
