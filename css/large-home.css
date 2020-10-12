@@ -2,7 +2,7 @@ main.container {
     display: flex;
     color: white;
     padding-top: 6em;
-    max-width: 1100px;
+    max-width: 1600px;
 }
 
 .left {
