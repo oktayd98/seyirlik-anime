@@ -59,6 +59,7 @@ main.container > .left > .anime-img{
     width: 273px;
     margin-bottom: 1rem;
     border-radius: 5px;
+    border: 1px solid transparent;
 }
 
 .related > .related-title {
