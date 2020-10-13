@@ -2,7 +2,10 @@ main.container {
     display: flex;
     color: white;
     padding-top: 6em;
-    width: 1280px;
+    max-width: 1280px;
+    justify-content: space-between;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
 }
 
 main.container > .left {
@@ -12,8 +15,7 @@ main.container > .left {
 .info {
     display: flex;
     flex-direction: column;
-    flex-grow: 3;    
-    width: 716px;
+    width: 560px;
 }
 
 main.container > .left > .anime-img{
@@ -47,7 +49,7 @@ main.container > .left > .anime-img{
 }
 
 .related {
-    height: 20px;
+    /* height: 20px; */
     margin-left: 2rem;
 }
 
@@ -56,7 +58,7 @@ main.container > .left > .anime-img{
     place-content: center;
     background-color: rgba(255,255,255, 0.07);
     height: 134px;
-    width: 412px;
+    width: 322px;
     margin-bottom: 1rem;
     border-radius: 5px;
 }
