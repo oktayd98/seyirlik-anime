@@ -2,6 +2,7 @@ main.container {
     display: flex;
     color: white;
     padding-top: 6em;
+    width: 1280px;
 }
 
 main.container > .left {
@@ -12,6 +13,7 @@ main.container > .left {
     display: flex;
     flex-direction: column;
     flex-grow: 3;    
+    width: 716px;
 }
 
 main.container > .left > .anime-img{
@@ -40,14 +42,34 @@ main.container > .left > .anime-img{
     font-weight: 200;
 }
 
+.left > .info .synopsis {
+    font-weight: 200;
+}
+
 .related {
     height: 20px;
     margin-left: 2rem;
 }
 
 .related > .related-row{
+    display: grid;
+    place-content: center;
     background-color: rgba(255,255,255, 0.07);
-    height: 135px;
-    width: 100%;
+    height: 134px;
+    width: 412px;
     margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.related > .related-title {
+    margin-bottom: 1rem;
+}
+
+.related > .related-title > h3{
+    display: inline;
+}
+
+.related-row:hover{
+    border: 1px solid white;
+    border-radius: 5px;
 }
