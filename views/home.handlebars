@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+    <div class="container">
+        {{>header}}
+
+        <div class="home">
+            <div class="left">
+                <p class="title-left">İzleyeceğin sıradaki <strong>animeyi bul!</strong></p>
+                <a href="#" class="btn">Listeye Git</a>
+            </div>
+            <div class="right">
+                <div class="anime-image">
+                    <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg" alt="image"
+                        style="border-radius: 5px;">
+                </div>
+                <div class="anime-info">
+                    <div class="anime-title">
+                        <h3>Fullmetal Alchemist: Brotherhood</h3>
+                    </div>
+                    <div class="info-row rating"><i class="fa fa-star"></i>9.22</div>
+                    <div class="info-row">
+                        <h4>Yayın Yeri:</h4> TV
+                    </div>
+                    <div class="info-row">
+                        <h4>Kategori:</h4> Action, Military, Adventure, Comedy, Drama, Magic, Fantasy, Shounen
+                    </div>
+                    <div class="info-row">
+                        <h4>Sıralama:</h4> #1
+                    </div>
+                    <div class="info-row">
+                        <h4>Bölüm Sayısı:</h4> 64
+                    </div>
+                    <div class="info-row">
+                        <h4>Süre:</h4> 24 dakika
+                    </div>
+                    <div class="info-row">
+                        <h4>Yayın Tarihi: </h4>2009 - 2010
+                    </div>
+                    <a href="/detail" class="btn">İncele</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+.header {
+    font-size: 16px;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    height: 5rem;
+}
+
+.header .btn-logo {
+    margin-right: 1.5rem;
+}
+
+.header .menu {
+    display: flex;
+    align-items: center;
+}
+
+.header .menu .li-btn {
+    margin-right: .5rem;
+}
+
+.header .search {
+    margin-left: auto;
+}
+
+.header .search .search-form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.07);
+    padding: 1rem;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.header .search .search-form .search-btn {
+    background: transparent;
+    border: 0;
+    outline: 0;
+    margin-left: 5px;
+}
+
+.header .search .search-form input {
+    background: transparent;
+    border: 0;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.header .search .search-form input:focus {
+    outline: 0;
+}
+
+.header .search .search-form input::placeholder {
+    /* font-weight: 200; */
+    color: rgba(255, 255, 255, 0.4);
+}

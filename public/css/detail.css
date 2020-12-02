@@ -1,0 +1,97 @@
+.detail {
+    margin-top: 5rem;
+    display: flex;
+}
+
+.detail .left {
+    display: flex;
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.detail .left .anime-image {
+    width: 200px;
+    margin-right: 1.5rem;
+}
+
+.detail .left .anime-image img {
+    width: 100%;
+}
+
+.detail .left .anime-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.detail .left .anime-info .anime-title {
+    font-size: 16px;
+    margin-bottom: 1rem;
+}
+
+.detail .left .anime-info .info-row {
+    margin-bottom: .7rem;
+}
+
+.detail .left .anime-info .info-row.rating {
+    display: flex;
+    align-items: center;
+    color: #ffff00;
+    font-size: 16px;
+}
+
+.detail .left .anime-info .info-row .fa.fa-star {
+    margin-right: .5rem;
+    color: #ffff00;
+}
+
+.detail .left .anime-info .synopsis {
+    margin-top: 1rem;
+    line-height: 20px;
+}
+
+.detail .left .anime-info .synopsis p {
+    margin-bottom: 1rem;
+}
+
+.detail .right {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 100vh;
+    padding-left: 1rem;
+    box-sizing: border-box;
+}
+
+.detail .right .related-title {
+    font-size: 16px;
+    margin-bottom: 2rem;
+}
+
+.detail .right .related-anime {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    background: rgba(255, 255, 255, .07);
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: border .3s;
+}
+
+.detail .right .related-anime img {
+    width: 70px;
+    margin-right: auto;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    margin-right: 1rem;
+}
+
+.detail .right .related-anime .related-name {
+    flex: 1;
+}
+
+.detail .right .related-anime:hover {
+    border: 1px solid #fff;
+}

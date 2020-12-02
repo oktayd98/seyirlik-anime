@@ -1,0 +1,38 @@
+.list {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 4rem;
+}
+
+.list .anime-container {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 7px;
+}
+
+.list .anime-container .anime-image {
+    width: 100%;
+}
+
+.list .anime-container .anime-image img {
+    width: 100%;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+}
+
+.list .anime-container .anime-info {
+    padding: 2px 10px 5px 10px;
+    color: #000;
+}
+
+.list .anime-container .anime-info .anime-title {
+    margin-bottom: 2px;
+}
+
+.list .anime-container .anime-info .anime-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
