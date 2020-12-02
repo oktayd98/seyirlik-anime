@@ -9,14 +9,19 @@ const app = express();
 
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
+
+app.use(express.json());
 app.use(express.static('public'));
+app.use('/admin', express.static('views/admin'));
+
 app.use('/', routers);
-app.get('/', (req, res) => {
-    res.render('home');
-});
+
+// app.get('/', (req, res) => {
+//     res.render('home');
+// });
 app.use(errorHandler);
 
-app.listen(5000, () => {
+app.listen(process.env.PORT || 5000, () => {
     console.log('Server is running.');
 });
 
