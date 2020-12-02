@@ -8,7 +8,9 @@ const listPage = asyncWrapper(async (req, res, next) => {
     res.status(200).render('list');
 });
 const detailPage = asyncWrapper(async (req, res, next) => {
-    res.status(200).render('detail');
+    const anime = await Anime.findOne({ name: req.params.name });
+    console.log(anime);
+    res.render('detail', anime);
 });
 
 module.exports = { indexPage, listPage, detailPage };

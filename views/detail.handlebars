@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/detail.css">
 </head>
 
 <body>
@@ -20,14 +20,14 @@
         <div class="detail">
             <div class="left">
                 <div class="anime-image">
-                    <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg" alt="image"
+                    <img src="{{poster}}" alt="image"
                         style="border-radius: 5px;">
                 </div>
                 <div class="anime-info">
                     <div class="anime-title">
-                        <h3>Fullmetal Alchemist: Brotherhood</h3>
+                        <h3>{{name}}</h3>
                     </div>
-                    <div class="info-row rating"><i class="fa fa-star"></i>9.22</div>
+                    <div class="info-row rating"><i class="fa fa-star"></i>{{rate}}</div>
                     <div class="info-row">
                         <h4>Yayın Yeri:</h4> TV
                     </div>
@@ -38,7 +38,7 @@
                         <h4>Sıralama:</h4> #1
                     </div>
                     <div class="info-row">
-                        <h4>Bölüm Sayısı:</h4> 64
+                        <h4>Bölüm Sayısı:</h4> {{episodes}}
                     </div>
                     <div class="info-row">
                         <h4>Süre:</h4> 24 dakika
@@ -47,7 +47,8 @@
                         <h4>Yayın Tarihi: </h4>2009 - 2010
                     </div>
                     <div class="synopsis">
-                        <p>"In order for something to be obtained, something of equal value must be lost."</p>
+                        {{synopsis}}
+                        {{!-- <p>"In order for something to be obtained, something of equal value must be lost."</p>
 
                         <p>Alchemy is bound by this Law of Equivalent Exchange—something the young brothers Edward and
                             Alphonse
@@ -82,7 +83,7 @@
                             racing against time, Edward and Alphonse must ask themselves if what they are doing will
                             make them
                             human
-                            again... or take away their humanity.</p>
+                            again... or take away their humanity.</p> --}}
                     </div>
                 </div>
             </div>
