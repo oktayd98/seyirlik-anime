@@ -4,11 +4,13 @@ const animeSchema = new Schema({
     title: {
         type: String,
         required: true,
+        unique: true,
     },
 
     poster: {
         type: String,
-        default: 'https://i.pinimg.com/originals/e8/9a/41/e89a41a1f4021e81cafafec599233e34.png',
+        default:
+            'https://i.pinimg.com/originals/e8/9a/41/e89a41a1f4021e81cafafec599233e34.png',
     },
 
     rate: {
