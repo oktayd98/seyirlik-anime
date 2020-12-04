@@ -17,41 +17,88 @@
 <body>
     <div class="container">
         {{>header}}
-
         <div class="home">
-            <div class="left">
-                <p class="title-left">İzleyeceğin sıradaki <strong>animeyi bul!</strong></p>
-                <a href="#" class="btn">Listeye Git</a>
-            </div>
-            <div class="right">
-                <div class="anime-image">
-                    <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg" alt="image"
-                        style="border-radius: 5px;">
+            <div class="home-content">
+                <div class="left">
+                    <p class="title-left">İzleyeceğin sıradaki <strong>animeyi bul!</strong></p>
+                    <a href="#" class="btn">Listeye Git</a>
                 </div>
-                <div class="anime-info">
-                    <div class="anime-title">
-                        <h3>Fullmetal Alchemist: Brotherhood</h3>
+                <div class="right">
+                    <div class="anime-image">
+                        <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg" alt="image"
+                            style="border-radius: 5px;">
                     </div>
-                    <div class="info-row rating"><i class="fa fa-star"></i>9.22</div>
-                    <div class="info-row">
-                        <h4>Yayın Yeri:</h4> TV
+                    <div class="anime-info">
+                        <div class="anime-title">
+                            <h3>Fullmetal Alchemist: Brotherhood</h3>
+                        </div>
+                        <div class="info-row rating"><i class="fa fa-star"></i>9.22</div>
+                        <div class="info-row">
+                            <h4>Yayın Yeri:</h4> TV
+                        </div>
+                        <div class="info-row">
+                            <h4>Kategori:</h4> Action, Military, Adventure, Comedy, Drama, Magic, Fantasy, Shounen
+                        </div>
+                        <div class="info-row">
+                            <h4>Sıralama:</h4> #1
+                        </div>
+                        <div class="info-row">
+                            <h4>Bölüm Sayısı:</h4> 64
+                        </div>
+                        <div class="info-row">
+                            <h4>Süre:</h4> 24 dakika
+                        </div>
+                        <div class="info-row">
+                            <h4>Yayın Tarihi: </h4>2009 - 2010
+                        </div>
+                        <a href="/detail" class="btn">İncele</a>
                     </div>
-                    <div class="info-row">
-                        <h4>Kategori:</h4> Action, Military, Adventure, Comedy, Drama, Magic, Fantasy, Shounen
+                </div>
+            </div>
+            <div class="scroll">
+                <a href="#collections">
+                <span></span><span></span><span></span>
+                </a>
+            </div>
+        </div>
+        <div class="collections" id="collections">
+            <div class="collections-content">
+                <div class="collection-box">
+                    <div class="collection-image"><img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg" alt="" srcset=""></div>
+                    <div class="collection-text">
+                        <div class="text-title"><h3>Dostluk ve Mücadele</h3></div>
+                        <div class="text-info"><p>Gerçek dostlar kötü günlerde yanınızdadır. Bir insanın dostu için neleri feda edebileceğini ve neler yapabileceğini görünce hayata olan inancınız artacak.</p></div>
                     </div>
-                    <div class="info-row">
-                        <h4>Sıralama:</h4> #1
+                     <div class="collection-link">
+                        <div class="link-title"><h3>İNCELE</h3></div>
+                        <div class="link-icon"><i class="fas fa-arrow-right"></i></div>
                     </div>
-                    <div class="info-row">
-                        <h4>Bölüm Sayısı:</h4> 64
+                </div>
+                <div class="collection-box">
+                    <div class="collection-image">
+                        <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg" alt="" srcset="">
                     </div>
-                    <div class="info-row">
-                        <h4>Süre:</h4> 24 dakika
+                    <div class="collection-text">
+                        <div class="text-title"><h3>Dostluk ve Mücadele</h3></div>
+                        <div class="text-info"><p>Gerçek dostlar kötü günlerde yanınızdadır. Bir insanın dostu için neleri feda edebileceğini ve neler yapabileceğini görünce hayata olan inancınız artacak.</p></div>
                     </div>
-                    <div class="info-row">
-                        <h4>Yayın Tarihi: </h4>2009 - 2010
+                    <div class="collection-link">
+                        <div class="link-title"><h3>İNCELE</h3></div>
+                        <div class="link-icon"><i class="fas fa-arrow-right"></i></div>
                     </div>
-                    <a href="/detail" class="btn">İncele</a>
+                </div>
+                <div class="collection-box">
+                    <div class="collection-image">
+                        <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg" alt="" srcset="">
+                    </div>
+                    <div class="collection-text">
+                        <div class="text-title"><h3>Dostluk ve Mücadele</h3></div>
+                        <div class="text-info"><p>Gerçek dostlar kötü günlerde yanınızdadır. Bir insanın dostu için neleri feda edebileceğini ve neler yapabileceğini görünce hayata olan inancınız artacak.</p></div>
+                    </div>
+                    <div class="collection-link">
+                        <div class="link-title"><h3>İNCELE</h3></div>
+                        <div class="link-icon"><i class="fas fa-arrow-right"></i></div>
+                    </div>
                 </div>
             </div>
         </div>
