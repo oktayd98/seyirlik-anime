@@ -9,18 +9,16 @@ const sendToken = (user, res) => {
             expires: new Date(Date.now() + parseInt(JWT_COOKIE) * 1000 * 60),
             secure: NODE_ENV === 'development' ? false : true,
         })
-        .json({
-            access_token: token,
-        });
+        .redirect('newanime');
 };
 
 const getToken = (req) => {
-    const token = req.headers.authorization;
+    const token = req.cookies.access_token;
     return token;
 };
 
 const isExists = (req) => {
-    return !!req.headers.authorization;
+    return !!req.cookies.access_token;
 };
 
 const verify = (req, res, next) => {

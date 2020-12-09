@@ -6,7 +6,8 @@ const CustomError = require('../helpers/CustomError');
 
 const login = asyncWrapper(async (req, res, next) => {
     if (req.method === 'GET') {
-        res.status(200).render('admin/login');
+        if (!tokenHelper.isExists(req)) return res.status(200).render('admin/login');
+        return res.redirect('newanime');
     }
 
     if (req.method === 'POST') {
@@ -27,14 +28,12 @@ const login = asyncWrapper(async (req, res, next) => {
 const logout = (req, res, next) => {
     return res
         .status(200)
-        .cookie({
-            expires: new Date(Date.now()),
+        .cookie('access_token', '', {
+            expires: new Date(Date.now() - 1000),
             httpOnly: true,
             secure: process.env.NODE_ENV === 'development' ? false : true,
         })
-        .json({
-            message: 'logout',
-        });
+        .redirect('login');
 };
 
 const register = asyncWrapper(async (req, res, next) => {

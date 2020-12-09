@@ -6,6 +6,7 @@ const isAuth = require('../middlewares/isAuth');
 // router.get('/newcollection', isAuth, adminController.login);
 // router.get('/animes', isAuth, adminController.login);
 // router.get('/collections', isAuth, adminController.login);
+router.get('/', adminController.login);
 router.get('/newanime', isAuth, adminController.newanime);
 router.get('/login', adminController.login);
 router.get('/logout', adminController.logout);
