@@ -1,12 +1,11 @@
-const mongoose = require("mongoose");
-const { model } = require("./Anime");
+const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const genreSchema = new Schema({
-    name: {
-        type: String,
-        required: true,
-    },
+  name: {
+    type: String,
+    required: true,
+  },
 });
 
-module.exports = mongoose.model("genre", genreSchema);
+module.exports = mongoose.model('genre', genreSchema);

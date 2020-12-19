@@ -1,0 +1,42 @@
+.newanime-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.newanime-form .flex-row {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.newanime-form .flex-row .flex-item.float-right {
+    display: flex;
+    margin-bottom: 2rem;
+    margin-left: auto;
+}
+
+.newanime-form .flex-row .flex-item {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+}
+
+/* .newanime-form .flex-row .flex-item label {
+    margin-bottom: 1rem;
+} */
+
+.newanime-form .grid-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.newanime-form .grid-row .grid-title {
+    margin-bottom: 1rem;
+}
+
+.newanime-form .grid-row .grid-table {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}

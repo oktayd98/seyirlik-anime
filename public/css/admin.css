@@ -1,38 +1,26 @@
-.login-modal {
+.content-wrapper {
+    margin-top: 4rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-    min-width: 400px;
-    padding: 2rem;
-    background: #fff;
-    border-radius: 5px;
 }
 
-.login-modal .admin-icon i {
-    font-size: 10rem;
-    color: #000;
+.content-wrapper .side-div {
+    width: 16%;
+    padding-right: .5rem;
 }
 
-.login-modal .login-form .form-item {
-    margin-bottom: 1rem;
+.content-wrapper .side-div .side-menu {
+    display: flex;
+    flex-direction: column;
 }
 
-.login-modal .login-form .form-item input {
-    padding: .5rem 1rem;
-    border: none;
-    outline: none;
-    border-radius: 3px;
-    background: #e1e1e1;
-    color: #000;
+.content-wrapper .side-div .side-menu .li-btn {
+    font-size: 16px;
 }
 
-.login-modal .login-form .form-item input::placeholder {
-    color: rgba(0, 0, 0, .5);
-}
-
-.login-modal .login-form button {
-    padding: .7rem 1.2rem;
-    background: rgba(0, 105, 175, 1);
-    color: #fff;
+.content-wrapper .list {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 4rem;
+    flex: 1;
 }

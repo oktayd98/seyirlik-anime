@@ -9,7 +9,15 @@ const connectDatabase = require('./helpers/connectDatabase');
 
 const app = express();
 
-app.engine('handlebars', exphbs());
+app.engine(
+  'handlebars',
+  exphbs({
+    runtimeOptions: {
+      allowProtoPropertiesByDefault: true,
+      allowProtoMethodsByDefault: true,
+    },
+  })
+);
 app.set('view engine', 'handlebars');
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -26,7 +34,7 @@ app.use('/', routers);
 app.use(errorHandler);
 
 app.listen(process.env.PORT || 5000, () => {
-    console.log('Server is running.');
+  console.log('Server is running.');
 });
 
 connectDatabase();
