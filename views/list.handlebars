@@ -18,177 +18,19 @@
     <div class="container">
         {{>header}}
         <div class="list">
-            <div class="anime-container">
-                <div class="anime-image">
-                    <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg">
+            {{#each animes}}
+            <a href="/detail/{{name}}">
+                <div class="anime-container">
+                    <div class="anime-image">
+                        <img src="{{this.poster}}">
+                    </div>
+                    <div class="anime-info">
+                        <div class="anime-title">{{this.name}}</div>
+                        <div class="anime-rating"><span>TV</span><span>{{this.rate}}</span></div>
+                    </div>
                 </div>
-                <div class="anime-info">
-                    <div class="anime-title">Fullmetal Alchemist: Brotherhood</div>
-                    <div class="anime-rating"><span>TV</span><span>9.22</span></div>
-                </div>
-            </div>
-            <div class="anime-container">
-                <div class="anime-image">
-                    <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg">
-                </div>
-                <div class="anime-info">
-                    <div class="anime-title">Fullmetal Alchemist: Brotherhood</div>
-                    <div class="anime-rating"><span>TV</span><span>9.22</span></div>
-                </div>
-            </div>
-            <div class="anime-container">
-                <div class="anime-image">
-                    <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg">
-                </div>
-                <div class="anime-info">
-                    <div class="anime-title">Fullmetal Alchemist: Brotherhood</div>
-                    <div class="anime-rating"><span>TV</span><span>9.22</span></div>
-                </div>
-            </div>
-            <div class="anime-container">
-                <div class="anime-image">
-                    <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg">
-                </div>
-                <div class="anime-info">
-                    <div class="anime-title">Fullmetal Alchemist: Brotherhood</div>
-                    <div class="anime-rating"><span>TV</span><span>9.22</span></div>
-                </div>
-            </div>
-            <div class="anime-container">
-                <div class="anime-image">
-                    <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg">
-                </div>
-                <div class="anime-info">
-                    <div class="anime-title">Fullmetal Alchemist: Brotherhood</div>
-                    <div class="anime-rating"><span>TV</span><span>9.22</span></div>
-                </div>
-            </div>
-            <div class="anime-container">
-                <div class="anime-image">
-                    <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg">
-                </div>
-                <div class="anime-info">
-                    <div class="anime-title">Fullmetal Alchemist: Brotherhood</div>
-                    <div class="anime-rating"><span>TV</span><span>9.22</span></div>
-                </div>
-            </div>
-            <div class="anime-container">
-                <div class="anime-image">
-                    <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg">
-                </div>
-                <div class="anime-info">
-                    <div class="anime-title">Fullmetal Alchemist: Brotherhood</div>
-                    <div class="anime-rating"><span>TV</span><span>9.22</span></div>
-                </div>
-            </div>
-            <div class="anime-container">
-                <div class="anime-image">
-                    <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg">
-                </div>
-                <div class="anime-info">
-                    <div class="anime-title">Fullmetal Alchemist: Brotherhood</div>
-                    <div class="anime-rating"><span>TV</span><span>9.22</span></div>
-                </div>
-            </div>
-            <div class="anime-container">
-                <div class="anime-image">
-                    <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg">
-                </div>
-                <div class="anime-info">
-                    <div class="anime-title">Fullmetal Alchemist: Brotherhood</div>
-                    <div class="anime-rating"><span>TV</span><span>9.22</span></div>
-                </div>
-            </div>
-            <div class="anime-container">
-                <div class="anime-image">
-                    <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg">
-                </div>
-                <div class="anime-info">
-                    <div class="anime-title">Fullmetal Alchemist: Brotherhood</div>
-                    <div class="anime-rating"><span>TV</span><span>9.22</span></div>
-                </div>
-            </div>
-            <div class="anime-container">
-                <div class="anime-image">
-                    <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg">
-                </div>
-                <div class="anime-info">
-                    <div class="anime-title">Fullmetal Alchemist: Brotherhood</div>
-                    <div class="anime-rating"><span>TV</span><span>9.22</span></div>
-                </div>
-            </div>
-            <div class="anime-container">
-                <div class="anime-image">
-                    <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg">
-                </div>
-                <div class="anime-info">
-                    <div class="anime-title">Fullmetal Alchemist: Brotherhood</div>
-                    <div class="anime-rating"><span>TV</span><span>9.22</span></div>
-                </div>
-            </div>
-            <div class="anime-container">
-                <div class="anime-image">
-                    <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg">
-                </div>
-                <div class="anime-info">
-                    <div class="anime-title">Fullmetal Alchemist: Brotherhood</div>
-                    <div class="anime-rating"><span>TV</span><span>9.22</span></div>
-                </div>
-            </div>
-            <div class="anime-container">
-                <div class="anime-image">
-                    <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg">
-                </div>
-                <div class="anime-info">
-                    <div class="anime-title">Fullmetal Alchemist: Brotherhood</div>
-                    <div class="anime-rating"><span>TV</span><span>9.22</span></div>
-                </div>
-            </div>
-            <div class="anime-container">
-                <div class="anime-image">
-                    <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg">
-                </div>
-                <div class="anime-info">
-                    <div class="anime-title">Fullmetal Alchemist: Brotherhood</div>
-                    <div class="anime-rating"><span>TV</span><span>9.22</span></div>
-                </div>
-            </div>
-            <div class="anime-container">
-                <div class="anime-image">
-                    <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg">
-                </div>
-                <div class="anime-info">
-                    <div class="anime-title">Fullmetal Alchemist: Brotherhood</div>
-                    <div class="anime-rating"><span>TV</span><span>9.22</span></div>
-                </div>
-            </div>
-            <div class="anime-container">
-                <div class="anime-image">
-                    <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg">
-                </div>
-                <div class="anime-info">
-                    <div class="anime-title">Fullmetal Alchemist: Brotherhood</div>
-                    <div class="anime-rating"><span>TV</span><span>9.22</span></div>
-                </div>
-            </div>
-            <div class="anime-container">
-                <div class="anime-image">
-                    <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg">
-                </div>
-                <div class="anime-info">
-                    <div class="anime-title">Fullmetal Alchemist: Brotherhood</div>
-                    <div class="anime-rating"><span>TV</span><span>9.22</span></div>
-                </div>
-            </div>
-            <div class="anime-container">
-                <div class="anime-image">
-                    <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg">
-                </div>
-                <div class="anime-info">
-                    <div class="anime-title">Fullmetal Alchemist: Brotherhood</div>
-                    <div class="anime-rating"><span>TV</span><span>9.22</span></div>
-                </div>
-            </div>
+            </a>
+            {{/each}}
         </div>
     </div>
 </body>

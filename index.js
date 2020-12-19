@@ -28,13 +28,10 @@ app.use('/admin', express.static('views/admin'));
 
 app.use('/', routers);
 
-// app.get('/', (req, res) => {
-//     res.render('home');
-// });
 app.use(errorHandler);
 
 app.listen(process.env.PORT || 5000, () => {
-  console.log('Server is running.');
+  console.log(`Server is running on http://localhost:${process.env.PORT}`);
 });
 
 connectDatabase();

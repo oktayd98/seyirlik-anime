@@ -96,7 +96,8 @@
 }
 
 .newanime-form select option {
-    color: #333;
+    color: #fff;
+    background-color: rgba(0, 105, 175, 1);
 }
 
 .select-container {

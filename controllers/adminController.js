@@ -27,7 +27,6 @@ const login = asyncWrapper(async (req, res, next) => {
     tokenHelper.sendToken(user, res);
   }
 });
-
 const logout = (req, res, next) => {
   return res
     .status(200)
@@ -74,16 +73,28 @@ const newAnime = asyncWrapper(async (req, res, next) => {
       synopsis,
     } = req.body;
 
-    const anime = await Anime.create({
-      name,
-      poster,
-      rate,
-      episodes,
-      year,
-      status,
-      genres,
-      synopsis,
-    });
+    if (poster === '') {
+      await Anime.create({
+        name,
+        rate,
+        episodes,
+        year,
+        status,
+        genres,
+        synopsis,
+      });
+    } else {
+      await Anime.create({
+        name,
+        poster,
+        rate,
+        episodes,
+        year,
+        status,
+        genres,
+        synopsis,
+      });
+    }
 
     res.redirect('newanime');
   }
