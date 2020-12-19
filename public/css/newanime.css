@@ -2,8 +2,19 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin: auto;
+    margin-left: 3rem;
+    position: relative;
+    flex: 1
 }
+
+/* .newanime-form::before {
+    content: '';
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    position: absolute;
+    left: -7rem;
+    top: 0;
+    height: calc(100% - 45px);
+} */
 
 .newanime-form .flex-row {
     display: flex;
@@ -14,6 +25,11 @@
     display: flex;
     margin-bottom: 2rem;
     margin-left: auto;
+}
+
+.newanime-form .flex-row .flex-item.text-area {
+    width: 100%;
+    margin: 0;
 }
 
 .newanime-form .flex-row .flex-item {
@@ -39,4 +55,70 @@
 .newanime-form .grid-row .grid-table {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    grid-gap: 12px;
+}
+
+.newanime-form label {
+    margin-bottom: 4px;
+}
+
+.newanime-form input:not([type='checkbox']), .newanime-form textarea, .newanime-form select {
+    background-color: rgba(255, 255, 255, 0.07);
+    height: 42px;
+    padding: 6px;
+    border: 0;
+    outline: 0;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.newanime-form input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+.newanime-form input[type='checkbox'] {
+    display: none;
+}
+
+.newanime-form input[type='checkbox']+label {
+    color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+.newanime-form input[type='checkbox']:checked+label {
+    color: rgb(255, 255, 255);
+}
+
+.newanime-form select {
+    -webkit-appearance: none;
+    appearance: none;
+    padding-right: 25px;
+}
+
+.newanime-form select option {
+    color: #333;
+}
+
+.select-container {
+    position: relative;
+}
+
+.select-container::after {
+    content: ' ';
+    position: absolute;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+    top: 65%;
+    right: 5px;
+}
+
+.newanime-form .flex-item.w50 {
+    width: 40%;
+}
+
+.newanime-form textarea {
+    min-height: 220px;
+    width: 100%;
+    font-family: 'Segoe UI';
 }
