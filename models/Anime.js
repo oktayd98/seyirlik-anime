@@ -52,4 +52,11 @@ const animeSchema = new Schema({
   },
 });
 
+animeSchema.statics.getRandom = async function () {
+  const count = await this.countDocuments();
+  const rand = Math.floor(Math.random() * count);
+  const anime = this.findOne().skip(rand).populate('genres');
+  return anime;
+};
+
 module.exports = model('anime', animeSchema);

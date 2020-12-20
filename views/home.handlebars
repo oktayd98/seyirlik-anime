@@ -21,37 +21,34 @@
             <div class="home-content">
                 <div class="left">
                     <p class="title-left">İzleyeceğin sıradaki <strong>animeyi bul!</strong></p>
-                    <a href="#" class="btn">Listeye Git</a>
+                    <a href="/animelist" class="btn">Listeye Git</a>
                 </div>
                 <div class="right">
                     <div class="anime-image">
-                        <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg" alt="image"
+                        <img src="{{anime.poster}}" alt="image"
                             style="border-radius: 5px;">
                     </div>
                     <div class="anime-info">
                         <div class="anime-title">
-                            <h3>Fullmetal Alchemist: Brotherhood</h3>
+                            <h3>{{anime.name}}</h3>
                         </div>
-                        <div class="info-row rating"><i class="fa fa-star"></i>9.22</div>
+                        <div class="info-row rating"><i class="fa fa-star"></i>{{anime.rate}}</div>
                         <div class="info-row">
                             <h4>Yayın Yeri:</h4> TV
                         </div>
                         <div class="info-row">
-                            <h4>Kategori:</h4> Action, Military, Adventure, Comedy, Drama, Magic, Fantasy, Shounen
+                            <h4>Kategori:</h4> {{#each anime.genres}} {{name}} {{/each}}
                         </div>
                         <div class="info-row">
-                            <h4>Sıralama:</h4> #1
-                        </div>
-                        <div class="info-row">
-                            <h4>Bölüm Sayısı:</h4> 64
+                            <h4>Bölüm Sayısı:</h4> {{anime.episodes}}
                         </div>
                         <div class="info-row">
                             <h4>Süre:</h4> 24 dakika
                         </div>
                         <div class="info-row">
-                            <h4>Yayın Tarihi: </h4>2009 - 2010
+                            <h4>Yayın Tarihi: </h4>{{anime.year}}
                         </div>
-                        <a href="/detail" class="btn">İncele</a>
+                        <a href="/detail/{{anime.name}}" class="btn">İncele</a>
                     </div>
                 </div>
             </div>

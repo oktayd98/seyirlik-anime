@@ -21,10 +21,10 @@
     margin-bottom: 2rem;
 }
 
-.newanime-form .flex-row .flex-item.float-right {
+.newanime-form .flex-row .flex-item {
     display: flex;
     margin-bottom: 2rem;
-    margin-left: auto;
+    flex: 1;
 }
 
 .newanime-form .flex-row .flex-item.text-area {
