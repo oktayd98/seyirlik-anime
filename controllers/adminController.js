@@ -100,4 +100,15 @@ const newAnime = asyncWrapper(async (req, res, next) => {
   }
 });
 
-module.exports = { login, register, animelist, logout, newAnime };
+const newCollection = asyncWrapper(async (req, res, next) => {
+  if (req.method === 'GET') res.render('admin/newcollection');
+});
+
+module.exports = {
+  login,
+  register,
+  animelist,
+  logout,
+  newAnime,
+  newCollection,
+};

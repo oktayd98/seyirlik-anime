@@ -20,61 +20,17 @@
         {{>header}}
         <div class="content-wrapper">
             {{>sidemenu}}
-            <form method="POST" action="/admin/newanime" class="newanime-form">
-            <div class="flex-row">
-                <div class="flex-item">
-                    <label for="mal">API Url</label>
-                    <input type="text" name="mal" id="mal" value="https://api.jikan.moe/v3/anime/">
-                </div>
-            </div>
+            <form method="POST" action="/admin/newcollection" class="newanime-form">
                 <div class="flex-row">
                     <div class="flex-item w50">
                         <label for="name">Anime Adı</label>
                         <input type="text" name="name" id="name">
                     </div>
-                    <div class="flex-item w50">
-                        <label for="poster">Poster</label>
-                        <input type="text" name="poster" id="poster">
-                    </div>
-                </div>
-                <div class="flex-row">
-                    <div class="flex-item">
-                        <label for="rate">Puan</label>
-                        <input type="number" step="0.01" name="rate" id="rate">
-                    </div>
-                    <div class="flex-item">
-                        <label for="episodes">Bölüm Sayısı</label>
-                        <input type="number" name="episodes" id="episodes">
-                    </div>
-                    <div class="flex-item">
-                        <label for="year">Yıl</label>
-                        <input type="number" name="year" id="year">
-                    </div>
-                    <div class="flex-item select-container">
-                        <label for="status">Yayınlanma</label>
-                        <select name="status" id="status">
-                            <option value="" selected></option>
-                            <option value="Devam Ediyor">Devam Ediyor</option>
-                            <option value="Tamamlandı">Tamamlandı</option>
-                            <option value="Gelecek">Gelecek</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="grid-row">
-                    <div class="grid-title">Türler</div>
-                    <div class="grid-table">
-                        {{#each genres}}
-                        <div class="grid-item">
-                            <input type="checkbox" id="{{name}}" name="genres" value={{_id}}>
-                            <label for="{{name}}">{{name}}</label>
-                        </div>                   
-                        {{/each}}
-                    </div>
                 </div>
                 <div class="flex-row">
                     <div class="flex-item text-area">
-                        <label for="synopsis">Konu</label>
-                        <textarea name="synopsis" id="synopsis" cols="80" rows="10"></textarea>
+                        <label for="description">Açıklama</label>
+                        <textarea name="description" id="description" cols="80" rows="10"></textarea>
                     </div>
                 </div>
                 <div class="flex-row">
