@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/collections.css">
+</head>
+
+<body>
+    <div class="container">
+        {{>header}}
+        <div class="collections">
+            <div class="collections-content">
+            {{#each collections}}
+            <div class="collection-box">
+                    <div class="collection-image"><img src="{{this.poster}}" alt="" srcset=""></div>
+                    <div class="collection-text">
+                        <div class="text-title"><h3>{{this.name}}</h3></div>
+                        <div class="text-info"><p>{{this.description}}</p></div>
+                    </div>
+                     <a href=""><div class="collection-link">
+                        <div class="link-title"><h3>İNCELE</h3></div>
+                        <div class="link-icon"><i class="fas fa-arrow-right"></i></div>
+                    </div></a>
+                </div>
+                 {{/each}}
+                 </div>
+        </div>
+    </div>
+</body>
+
+</html>

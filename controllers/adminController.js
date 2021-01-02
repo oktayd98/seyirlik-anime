@@ -94,7 +94,13 @@ const newCollection = asyncWrapper(async (req, res, next) => {
   if (req.method === 'GET') res.render('admin/newcollection', { animes });
   if (req.method === 'POST') {
     const { name, description, animes } = req.body;
-    await Collection.create({ name, description, animes });
+    const poster = await Anime.findOne({ _id: animes[0] }, { poster: 1 });
+    await Collection.create({
+      name,
+      description,
+      animes,
+      poster: poster.poster,
+    });
     res.redirect('newcollection');
   }
 });

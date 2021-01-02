@@ -1,12 +1,13 @@
 const Anime = require('../models/Anime');
+const Collection = require('../models/Collection');
 const asyncWrapper = require('../helpers/asyncWrapper');
 
-const indexPage = asyncWrapper(async (req, res, next) => {
+const indexPage = asyncWrapper(async (req, res) => {
   const anime = await Anime.getRandom();
   res.status(200).render('home', { anime });
 });
 
-const listPage = asyncWrapper(async (req, res, next) => {
+const listPage = asyncWrapper(async (req, res) => {
   if (req.query.search) {
     const query = req.query.search.toLowerCase();
     const animes = await Anime.find({
@@ -20,11 +21,16 @@ const listPage = asyncWrapper(async (req, res, next) => {
   return res.status(200).render('list', { animes });
 });
 
-const detailPage = asyncWrapper(async (req, res, next) => {
+const detailPage = asyncWrapper(async (req, res) => {
   const anime = await Anime.findOne({
     name: req.params.name,
   }).populate('genres');
   res.render('detail', { anime });
 });
 
-module.exports = { indexPage, listPage, detailPage };
+const collectionPage = asyncWrapper(async (req, res) => {
+  const collections = await Collection.find({}).populate('animes');
+  res.render('collections', { collections });
+});
+
+module.exports = { indexPage, listPage, detailPage, collectionPage };
