@@ -1,6 +1,7 @@
 .collections .collections-content {
     margin-top: 4rem;
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .collections .collections-content .collection-box {
@@ -9,6 +10,7 @@
     flex-direction: column;
     background: rgba(255, 255, 255, 0.07);
     border: 1px solid transparent;
+    justify-content: space-between;
 }
 
 .collections .collections-content .collection-box .collection-image {
