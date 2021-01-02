@@ -5,6 +5,7 @@ const tokenHelper = require('../helpers/tokenHelpers');
 const CustomError = require('../helpers/CustomError');
 const Anime = require('../models/Anime');
 const Genre = require('../models/Genre');
+const Collection = require('../models/Collection');
 
 const login = asyncWrapper(async (req, res, next) => {
   if (req.method === 'GET') {
@@ -37,18 +38,6 @@ const logout = (req, res, next) => {
     })
     .redirect('login');
 };
-
-const register = asyncWrapper(async (req, res, next) => {
-  const user = await Admin.create({
-    ...req.body,
-  });
-  res.json({
-    success: true,
-    user: {
-      name: user.username,
-    },
-  });
-});
 
 const animelist = asyncWrapper(async (req, res, next) => {
   res.render('admin/animelist');
@@ -101,12 +90,17 @@ const newAnime = asyncWrapper(async (req, res, next) => {
 });
 
 const newCollection = asyncWrapper(async (req, res, next) => {
-  if (req.method === 'GET') res.render('admin/newcollection');
+  const animes = await Anime.find({});
+  if (req.method === 'GET') res.render('admin/newcollection', { animes });
+  if (req.method === 'POST') {
+    const { name, description, animes } = req.body;
+    await Collection.create({ name, description, animes });
+    res.redirect('newcollection');
+  }
 });
 
 module.exports = {
   login,
-  register,
   animelist,
   logout,
   newAnime,

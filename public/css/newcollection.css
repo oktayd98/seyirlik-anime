@@ -1,0 +1,52 @@
+input {
+    color: #fff;
+}
+
+.newcollection-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 3rem;
+    position: relative;
+    flex: 1
+}
+
+.newcollection-form .flex-row {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.newcollection-form .flex-row label {
+    margin-bottom: 1rem;
+}
+
+.newcollection-form .flex-row .flex-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    flex: 1;
+}
+
+.newcollection-form .dropdown.selection {
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+.newcollection-form textarea {
+    background-color: rgba(255, 255, 255, 0.07);
+    padding: 6px;
+    border: 0;
+    outline: 0;
+    border-radius: 3px;
+    min-height: 220px;
+    width: 100%;
+    font-family: 'Segoe UI';
+}
+
+.newcollection-form .w50 input {
+    background-color: rgba(255, 255, 255, 0.07);
+    height: 42px;
+    padding: 6px;
+    border: 0;
+    outline: 0;
+    border-radius: 3px;
+}

@@ -25,8 +25,16 @@ a {
     color: #fff;
 }
 
-i {
+a:hover {
     color: #fff;
+}
+
+.fa-search, .fa-external-link-alt {
+    color: #fff;
+}
+
+i {
+    color: #000;
 }
 
 ul {
@@ -60,6 +68,10 @@ h1, h2, h3, h4, h5, h6 {
     color: #004878;
     font-weight: 600;
     padding: 0.85rem 1rem;
+}
+
+.btn-logo:hover {
+    color: #004878;
 }
 
 .li-btn {
