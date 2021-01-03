@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 4rem;
+    margin-bottom: 4rem;
 }
 
 .list .anime-container {

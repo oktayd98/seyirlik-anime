@@ -87,7 +87,7 @@ app.put('/api/anime/:id', (req, res) => {
     const id = parseInt(req.params.id);
 
     eleman bulunduğunda break ile döngü biter
-    for (const [i, e] of animes.entries()) {
+    for (const [i, e] of animes.entries()) { 
         if (e.id === id) {
             animes[i] = {
                 ...e,

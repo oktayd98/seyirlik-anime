@@ -1,5 +1,7 @@
 .filter {
     margin-top: 2rem;
+    position: sticky;
+    top: 0;
 }
 
 .alphabetical-category {

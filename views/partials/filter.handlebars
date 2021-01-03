@@ -1,41 +1,41 @@
 <div class="filter">
   <div class="alphabetical-category">
-      <a href="#A" class="alphabetical-category-link" title="A">A</a>
-      <a href="#B" class="alphabetical-category-link" title="B">B</a>
-      <a href="#C" class="alphabetical-category-link" title="C">C</a>
-      <a href="#D" class="alphabetical-category-link" title="D">D</a>
-      <a href="#E" class="alphabetical-category-link" title="E">E</a>
-      <a href="#F" class="alphabetical-category-link" title="F">F</a>
-      <a href="#G" class="alphabetical-category-link" title="G">G</a>
-      <a href="#H" class="alphabetical-category-link" title="H">H</a>
-      <a href="#I" class="alphabetical-category-link" title="I">I</a>
-      <a href="#J" class="alphabetical-category-link" title="J">J</a>
-      <a href="#K" class="alphabetical-category-link" title="K">K</a>
-      <a href="#L" class="alphabetical-category-link" title="L">L</a>
-      <a href="#M" class="alphabetical-category-link" title="M">M</a>
-      <a href="#N" class="alphabetical-category-link" title="N">N</a>
-      <a href="#O" class="alphabetical-category-link" title="O">O</a>
-      <a href="#P" class="alphabetical-category-link" title="P">P</a>
-      <a href="#Q" class="alphabetical-category-link" title="Q">Q</a>
-      <a href="#R" class="alphabetical-category-link" title="R">R</a>
-      <a href="#S" class="alphabetical-category-link" title="S">S</a>
-      <a href="#T" class="alphabetical-category-link" title="T">T</a>
-      <a href="#U" class="alphabetical-category-link" title="U">U</a>
-      <a href="#V" class="alphabetical-category-link" title="V">V</a>
-      <a href="#W" class="alphabetical-category-link" title="W">W</a>
-      <a href="#X" class="alphabetical-category-link" title="X">X</a>
-      <a href="#Y" class="alphabetical-category-link" title="Y">Y</a>
-      <a href="#Z" class="alphabetical-category-link" title="Z">Z</a>
+      <a href="/search?start=A" class="alphabetical-category-link" title="A">A</a>
+      <a href="/search?start=B" class="alphabetical-category-link" title="B">B</a>
+      <a href="/search?start=C" class="alphabetical-category-link" title="C">C</a>
+      <a href="/search?start=D" class="alphabetical-category-link" title="D">D</a>
+      <a href="/search?start=E" class="alphabetical-category-link" title="E">E</a>
+      <a href="/search?start=F" class="alphabetical-category-link" title="F">F</a>
+      <a href="/search?start=G" class="alphabetical-category-link" title="G">G</a>
+      <a href="/search?start=H" class="alphabetical-category-link" title="H">H</a>
+      <a href="/search?start=I" class="alphabetical-category-link" title="I">I</a>
+      <a href="/search?start=J" class="alphabetical-category-link" title="J">J</a>
+      <a href="/search?start=K" class="alphabetical-category-link" title="K">K</a>
+      <a href="/search?start=L" class="alphabetical-category-link" title="L">L</a>
+      <a href="/search?start=M" class="alphabetical-category-link" title="M">M</a>
+      <a href="/search?start=N" class="alphabetical-category-link" title="N">N</a>
+      <a href="/search?start=O" class="alphabetical-category-link" title="O">O</a>
+      <a href="/search?start=P" class="alphabetical-category-link" title="P">P</a>
+      <a href="/search?start=Q" class="alphabetical-category-link" title="Q">Q</a>
+      <a href="/search?start=R" class="alphabetical-category-link" title="R">R</a>
+      <a href="/search?start=S" class="alphabetical-category-link" title="S">S</a>
+      <a href="/search?start=T" class="alphabetical-category-link" title="T">T</a>
+      <a href="/search?start=U" class="alphabetical-category-link" title="U">U</a>
+      <a href="/search?start=V" class="alphabetical-category-link" title="V">V</a>
+      <a href="/search?start=W" class="alphabetical-category-link" title="W">W</a>
+      <a href="/search?start=X" class="alphabetical-category-link" title="X">X</a>
+      <a href="/search?start=Y" class="alphabetical-category-link" title="Y">Y</a>
+      <a href="/search?start=Z" class="alphabetical-category-link" title="Z">Z</a>
   </div>
-  <form action="animelist">
+  <form action="search">
   <div class="selects">
     
       <div class="select-container">
         <label class="lblselect" for="genres">Kategori</label>
         <select name="genres" id="genres">        
-            <option selected value="test">Seçilmedi</option>
+            <option selected value="">Seçilmedi</option>
              {{#each data.genres}}
-              <option value="{{this.name}}">{{this.name}}</option>
+              <option value="{{this._id}}">{{this.name}}</option>
             {{/each}}
         </select>
       </div>
@@ -43,13 +43,12 @@
       <div class="select-container">
         <label class="lblselect" for="year">Yıl</label>
         <select name="year" id="year">
-            <option selected value="test">Seçilmedi</option>
+            <option selected value="">Seçilmedi</option>
             {{#each data.years}}
               <option value="{{this}}">{{this}}</option>
             {{/each}}
         </select>
       </div>
-
       <div class="select-container">
         <label class="lblselect" for="ranking">Puan</label>
         <select name="rate" id="ranking">
