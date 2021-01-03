@@ -40,13 +40,14 @@ const logout = (req, res, next) => {
 };
 
 const animelist = asyncWrapper(async (req, res, next) => {
-  res.render('admin/animelist');
+  const animes = await Anime.find({}).sort({ name: 1 });
+  return res.render('admin/animelist', { animes });
 });
 
 const newAnime = asyncWrapper(async (req, res, next) => {
   if (req.method === 'GET') {
     const genres = await Genre.find({});
-    res.render('admin/newanime', {
+    return res.render('admin/newanime', {
       genres: genres,
     });
   }
@@ -85,13 +86,14 @@ const newAnime = asyncWrapper(async (req, res, next) => {
       });
     }
 
-    res.redirect('newanime');
+    return res.redirect('newanime');
   }
 });
 
 const newCollection = asyncWrapper(async (req, res, next) => {
   const animes = await Anime.find({});
-  if (req.method === 'GET') res.render('admin/newcollection', { animes });
+  if (req.method === 'GET')
+    return res.render('admin/newcollection', { animes });
   if (req.method === 'POST') {
     const { name, description, animes } = req.body;
     const poster = await Anime.findOne({ _id: animes[0] }, { poster: 1 });
@@ -101,7 +103,7 @@ const newCollection = asyncWrapper(async (req, res, next) => {
       animes,
       poster: poster.poster,
     });
-    res.redirect('newcollection');
+    return res.redirect('newcollection');
   }
 });
 
