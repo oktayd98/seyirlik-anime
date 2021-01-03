@@ -12,14 +12,16 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/animelist.css">
+    <link rel="stylesheet" href="css/filter.css">
 </head>
 
 <body>
     <div class="container">
         {{>header}}
+        {{>filter}}
         <div class="list">
-            {{#each animes}}
-            <a href="/detail/{{name}}">
+            {{#each data.animes}}
+            <a href="/detail/{{this.name}}">
                 <div class="anime-container">
                     <div class="anime-image">
                         <img src="{{this.poster}}">

@@ -1,4 +1,5 @@
 const Anime = require('../models/Anime');
+const Genre = require('../models/Genre');
 const Collection = require('../models/Collection');
 const asyncWrapper = require('../helpers/asyncWrapper');
 
@@ -13,12 +14,18 @@ const listPage = asyncWrapper(async (req, res) => {
     const animes = await Anime.find({
       name: { $regex: query, $options: 'i' },
     });
-    console.log(animes);
     return res.status(200).render('list', { animes });
   }
 
   const animes = await Anime.find({}).sort({ name: 1 });
-  return res.status(200).render('list', { animes });
+  const genres = await Genre.find({}).sort({ name: 1 });
+  const years = await Anime.distinct('year');
+  const data = {
+    animes,
+    genres,
+    years,
+  };
+  return res.status(200).render('list', { data });
 });
 
 const detailPage = asyncWrapper(async (req, res) => {
