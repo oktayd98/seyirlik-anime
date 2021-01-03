@@ -28,6 +28,15 @@ const detailPage = asyncWrapper(async (req, res) => {
 });
 
 const collectionPage = asyncWrapper(async (req, res) => {
+  if (req.params.name) {
+    const collection = await Collection.findOne({
+      name: req.params.name,
+    }).populate('animes');
+    const data = {
+      animes: collection.animes,
+    };
+    return res.render('list', { data });
+  }
   const collections = await Collection.find({}).populate('animes');
   res.render('collections', { collections });
 });
